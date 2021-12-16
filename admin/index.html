@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Grupp 5">
+    <meta name="description" content="">
+    <title>Grupp 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <!--Meny-->
+    <header>
+        <nav class="navbar p-0 navbar-expand-lg navbar-light shadow">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Books-4-You</a>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" id="bessBtn">Beställningar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="edtiBtn">Editera</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-secondary rounded-pill ms-lg-3" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Login</button>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container-fluid" id="wellDiv">
+            <h1>Välkommen Niklas!</h1>
+        </div>
+        
+        <!--Login modal-->
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel">Log in</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <input type="email" class="form-control mb-1" placeholder="name@example.com">
+                        <input type="password" class="form-control" placeholder="password">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Log in</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Beställningar container-->
+        <div class="container-fluid mt-5 p-1" id="bessDiv">
+            <div class="bessSelDiv d-flex">
+                <button type="button" class="btn btn-primary inline-block border border-dark mb-1 me-1" id="besUBTn">Beställningar</button>
+                <button type="button" class="btn btn-danger inline-block border border-dark mb-1" id="retUBTn">Returer</button>
+            </div>
+            <!-- beställningar-->
+            <table class="table table-light table-striped table-hover shadow border" id="bessUnderDiv">
+                <thead>
+                    <tr>
+                    <th scope="col">Ordernummer</th>
+                    <th scope="col">Lagersaldo</th>
+                    <th scope="col">Personnummer</th>
+                    <th scope="col">Namn</th>
+                    <th scope="col">Efternam</th>
+                    <th scope="col">Adress</th>
+                    <th scope="col">Postnummer</th>
+                    <th scope="col">Tele</th>
+                    <th scope="col">Mejl</th>
+                    <th scope="col">Betalningsmetod</th>
+                    <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>123</td>
+                        <td>19940506-7182</td>
+                        <td>Linus</td>
+                        <td>Sköldvik</td>
+                        <td>Götgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>linus@outlook.com</td>
+                        <td>Klarna</td>
+                        <td class="text-warning">Paketeras</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td class="text-danger">5</td>
+                        <td>19900506-7482</td>
+                        <td>Linnea</td>
+                        <td>Kraft</td>
+                        <td>Björkgatan 2</td>
+                        <td>24587</td>
+                        <td>+46-729876543</td>
+                        <td>linne@outlook.com</td>
+                        <td>Kreditkort</td>
+                        <td class="text-success">Levererad</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>76</td>
+                        <td>19940506-7182</td>
+                        <td>Martin</td>
+                        <td>Sköldvik</td>
+                        <td>Engelbrektsgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>martin@outlook.com</td>
+                        <td>Kreditkort</td>
+                        <td>Hanteras</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>150</td>
+                        <td>19940506-7182</td>
+                        <td>Martin</td>
+                        <td>Sköldvik</td>
+                        <td>Engelbrektsgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>martin@outlook.com</td>
+                        <td>Klarna</td>
+                        <td class="text-success">Levererad</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>98</td>
+                        <td>19940506-7182</td>
+                        <td>Martin</td>
+                        <td>Sköldvik</td>
+                        <td>Engelbrektsgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>martin@outlook.com</td>
+                        <td>Klarna</td>
+                        <td class="text-warning">Paketeras</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td class="text-danger">8</td>
+                        <td>19940506-7182</td>
+                        <td>Martin</td>
+                        <td>Sköldvik</td>
+                        <td>Engelbrektsgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>martin@outlook.com</td>
+                        <td>Klarna</td>
+                        <td>Hanteras</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>29</td>
+                        <td>19940506-7182</td>
+                        <td>Martin</td>
+                        <td>Sköldvik</td>
+                        <td>Engelbrektsgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>martin@outlook.com</td>
+                        <td>Klarna</td>
+                        <td class="text-success">Levererad</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>32</td>
+                        <td>19940506-7182</td>
+                        <td>Martin</td>
+                        <td>Sköldvik</td>
+                        <td>Engelbrektsgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>martin@outlook.com</td>
+                        <td>Kreditkort</td>
+                        <td class="text-success">Levererad</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11</th>
+                        <td class="text-danger">4</td>
+                        <td>19940506-7182</td>
+                        <td>Linus</td>
+                        <td>Sköldvik</td>
+                        <td>Götgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>linus@outlook.com</td>
+                        <td>Kreditkort</td>
+                        <td class="text-warning">Paketeras</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11</th>
+                        <td>230</td>
+                        <td>19900506-7482</td>
+                        <td>Linnea</td>
+                        <td>Kraft</td>
+                        <td>Björkgatan 2</td>
+                        <td>24587</td>
+                        <td>+46-729876543</td>
+                        <td>linne@outlook.com</td>
+                        <td>Klarna</td>
+                        <td class="text-success">Levererad</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11</th>
+                        <td>450</td>
+                        <td>19940506-7182</td>
+                        <td>Martin</td>
+                        <td>Sköldvik</td>
+                        <td>Engelbrektsgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>martin@outlook.com</td>
+                        <td>Kreditkort</td>
+                        <td>Hanteras</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>30</td>
+                        <td>19940506-7182</td>
+                        <td>Martin</td>
+                        <td>Sköldvik</td>
+                        <td>Engelbrektsgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>martin@outlook.com</td>
+                        <td>Klarna</td>
+                        <td class="text-success">Levererad</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10</th>
+                        <td class="text-danger">10</td>
+                        <td>19940506-7182</td>
+                        <td>Martin</td>
+                        <td>Sköldvik</td>
+                        <td>Engelbrektsgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>martin@outlook.com</td>
+                        <td>Klarna</td>
+                        <td class="text-warning">Paketeras</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11</th>
+                        <td>44</td>
+                        <td>19940506-7182</td>
+                        <td>Martin</td>
+                        <td>Sköldvik</td>
+                        <td>Engelbrektsgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>martin@outlook.com</td>
+                        <td>Kreditkort</td>
+                        <td>Hanteras</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">12</th>
+                        <td>50</td>
+                        <td>19940506-7182</td>
+                        <td>Martin</td>
+                        <td>Sköldvik</td>
+                        <td>Engelbrektsgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>martin@outlook.com</td>
+                        <td>Klarna</td>
+                        <td class="text-success">Levererad</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">13</th>
+                        <td class="text-danger">2</td>
+                        <td>19940506-7182</td>
+                        <td>Martin</td>
+                        <td>Sköldvik</td>
+                        <td>Engelbrektsgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>martin@outlook.com</td>
+                        <td>Klarna</td>
+                        <td class="text-success">Levererad</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10</th>
+                        <td class="text-danger">10</td>
+                        <td>19940506-7182</td>
+                        <td>Martin</td>
+                        <td>Sköldvik</td>
+                        <td>Engelbrektsgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>martin@outlook.com</td>
+                        <td>Klarna</td>
+                        <td class="text-warning">Paketeras</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11</th>
+                        <td>44</td>
+                        <td>19940506-7182</td>
+                        <td>Martin</td>
+                        <td>Sköldvik</td>
+                        <td>Engelbrektsgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>martin@outlook.com</td>
+                        <td>Kreditkort</td>
+                        <td>Hanteras</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">12</th>
+                        <td>50</td>
+                        <td>19940506-7182</td>
+                        <td>Martin</td>
+                        <td>Sköldvik</td>
+                        <td>Engelbrektsgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>martin@outlook.com</td>
+                        <td>Klarna</td>
+                        <td class="text-success">Levererad</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">13</th>
+                        <td class="text-danger">2</td>
+                        <td>19940506-7182</td>
+                        <td>Martin</td>
+                        <td>Sköldvik</td>
+                        <td>Engelbrektsgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>martin@outlook.com</td>
+                        <td>Klarna</td>
+                        <td class="text-success">Levererad</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Returer-->
+            <table class="table table-light table-striped table-hover shadow border" id="returUnderDiv">
+                <thead>
+                    <tr>
+                    <th scope="col">Ordernummer</th>
+                    <th scope="col">Orsak</th>
+                    <th scope="col">Personnummer</th>
+                    <th scope="col">Namn</th>
+                    <th scope="col">Efternam</th>
+                    <th scope="col">Adress</th>
+                    <th scope="col">Postnummer</th>
+                    <th scope="col">Tele</th>
+                    <th scope="col">Mejl</th>
+                    <th scope="col">Återbetalning</th>
+                    <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                     <tr>
+                        <th scope="row">1</th>
+                        <td class="text-danger">Bruten förpackning</td>
+                        <td>19940506-7182</td>
+                        <td>Linus</td>
+                        <td>Sköldvik</td>
+                        <td>Götgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>linus@outlook.com</td>
+                        <td>Makulering</td>
+                        <td>Hanteras</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td class="text-warning">Felbeställning</td>
+                        <td>19900506-7482</td>
+                        <td>Linnea</td>
+                        <td>Kraft</td>
+                        <td>Björkgatan 2</td>
+                        <td>24587</td>
+                        <td>+46-729876543</td>
+                        <td>linne@outlook.com</td>
+                        <td>Kreditkort</td>
+                        <td class="text-success">Klar</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td class="text-primary">Återlämnad</td>
+                        <td>19940506-7182</td>
+                        <td>Martin</td>
+                        <td>Sköldvik</td>
+                        <td>Engelbrektsgatan 2</td>
+                        <td>64587</td>
+                        <td>+46-729876543</td>
+                        <td>martin@outlook.com</td>
+                        <td>Makulering</td>
+                        <td>Hanteras</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--Lägg till / Editera-->
+        <div class="container-fluid" id="editDiv">
+            <div class="row">
+                <div class="col-12 col-lg-7 p-1">
+                    <!--Bibliotek med samtliga böcker med tillhörande sökfunktion för att filtrera-->
+                    <div class="mt-5 pe-0">
+                          <input type="email" class="form-control" placeholder="Sök">
+                    </div>
+                    <div class="mt-1" id="tableLib">
+                        <table class="table table-light table-striped table-hover shadow border">
+                            <thead>
+                                <tr>
+                                <th scope="col">Artikelnummer</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Utgvigen</th>
+                                <th scope="col">Vikt</th>
+                                <th scope="col">Förlag</th>
+                                <th scope="col">Språk</th>
+                                <th scope="col">Författare</th>
+                                <th scope="col">ISBN</th>
+                                <th scope="col">Upplaga</th>
+                                <th scope="col">Kategori</th>
+                                <th scope="col">Pris</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="Anum" scope="row" data-bs-toggle="modal" href="#exampleModalToggle1" role="button">1456892</th>
+                                    <td>Adrenalina</td>
+                                    <td>2021-09-12</td>
+                                    <td>332g</td>
+                                    <td>Albert Bonniers Förlag</td>
+                                    <td>Svenska</td>
+                                    <td>Zlatan Ibrahimovic</td>
+                                    <td>9789100196219</td>
+                                    <td>1</td>
+                                    <th scope="col">Roman</th>
+                                    <th scope="col">399</th>
+                                </tr>
+                                <tr>
+                                    <th class="Anum" scope="row" data-bs-toggle="modal" href="#exampleModalToggle" role="button">1298564</th>
+                                    <td>Julkatten</td>
+                                    <td>2017-10-05</td>
+                                    <td>404g</td>
+                                    <td>Rabén Sjögren</td>
+                                    <td>Engelska</td>
+                                    <td>Ester Roxberg</td>
+                                    <td>9789129732238</td>
+                                    <td>2</td>
+                                    <th scope="col">Skönlitteratur</th>
+                                    <th scope="col">299</th>
+                                </tr>
+                                <tr>
+                                    <th class="Anum" scope="row" data-bs-toggle="modal" href="#exampleModalToggle" role="button">1456892</th>
+                                    <td>Adrenalina</td>
+                                    <td>2021-09-12</td>
+                                    <td>332g</td>
+                                    <td>Albert Bonniers Förlag</td>
+                                    <td>Svenska</td>
+                                    <td>Zlatan Ibrahimovic</td>
+                                    <td>9789100196219</td>
+                                    <td>1</td>
+                                    <th scope="col">Skräck</th>
+                                    <th scope="col">199</th>
+                                </tr>
+                                <tr>
+                                    <th class="Anum" scope="row" data-bs-toggle="modal" href="#exampleModalToggle" role="button">1298564</th>
+                                    <td>Julkatten</td>
+                                    <td>2017-10-05</td>
+                                    <td>404g</td>
+                                    <td>Rabén Sjögren</td>
+                                    <td>Engelska</td>
+                                    <td>Ester Roxberg</td>
+                                    <td>9789129732238</td>
+                                    <td>2</td>
+                                    <th scope="col">Fakta</th>
+                                    <th scope="col">599</th>
+                                </tr>
+                                <tr>
+                                    <th class="Anum" scope="row" data-bs-toggle="modal" href="#exampleModalToggle" role="button">1456892</th>
+                                    <td>Adrenalina</td>
+                                    <td>2021-09-12</td>
+                                    <td>332g</td>
+                                    <td>Albert Bonniers Förlag</td>
+                                    <td>Svenska</td>
+                                    <td>Zlatan Ibrahimovic</td>
+                                    <td>9789100196219</td>
+                                    <td>1</td>
+                                    <th scope="col">Skönlitteratur</th>
+                                    <th scope="col">299</th>
+                                </tr>
+                                <tr>
+                                    <th class="Anum" scope="row" data-bs-toggle="modal" href="#exampleModalToggle" role="button">1298564</th>
+                                    <td>Julkatten</td>
+                                    <td>2017-10-05</td>
+                                    <td>404g</td>
+                                    <td>Rabén Sjögren</td>
+                                    <td>Engelska</td>
+                                    <td>Ester Roxberg</td>
+                                    <td>9789129732238</td>
+                                    <td>2</td>
+                                    <th scope="col">Fakta</th>
+                                    <th scope="col">599</th>
+                                </tr>
+                                <tr>
+                                    <th class="Anum" scope="row" data-bs-toggle="modal" href="#exampleModalToggle" role="button">1456892</th>
+                                    <td>Adrenalina</td>
+                                    <td>2021-09-12</td>
+                                    <td>332g</td>
+                                    <td>Albert Bonniers Förlag</td>
+                                    <td>Svenska</td>
+                                    <td>Zlatan Ibrahimovic</td>
+                                    <td>9789100196219</td>
+                                    <td>1</td>
+                                    <th scope="col">Skräck</th>
+                                    <th scope="col">199</th>
+                                </tr>
+                                <tr>
+                                    <th class="Anum" scope="row" data-bs-toggle="modal" href="#exampleModalToggle" role="button">1298564</th>
+                                    <td>Julkatten</td>
+                                    <td>2017-10-05</td>
+                                    <td>404g</td>
+                                    <td>Rabén Sjögren</td>
+                                    <td>Engelska</td>
+                                    <td>Ester Roxberg</td>
+                                    <td>9789129732238</td>
+                                    <td>2</td>
+                                    <th scope="col">Fakta</th>
+                                    <th scope="col">599</th>
+                                </tr>
+                                <tr>
+                                    <th class="Anum" scope="row" data-bs-toggle="modal" href="#exampleModalToggle" role="button">1456892</th>
+                                    <td>Adrenalina</td>
+                                    <td>2021-09-12</td>
+                                    <td>332g</td>
+                                    <td>Albert Bonniers Förlag</td>
+                                    <td>Svenska</td>
+                                    <td>Zlatan Ibrahimovic</td>
+                                    <td>9789100196219</td>
+                                    <td>1</td>
+                                    <th scope="col">Skönlitteratur</th>
+                                    <th scope="col">299</th>
+                                </tr>
+                                <tr>
+                                    <th class="Anum" scope="row" data-bs-toggle="modal" href="#exampleModalToggle" role="button">1298564</th>
+                                    <td>Julkatten</td>
+                                    <td>2017-10-05</td>
+                                    <td>404g</td>
+                                    <td>Rabén Sjögren</td>
+                                    <td>Engelska</td>
+                                    <td>Ester Roxberg</td>
+                                    <td>9789129732238</td>
+                                    <td>2</td>
+                                    <th scope="col">Fakta</th>
+                                    <th scope="col">599</th>
+                                </tr>
+                                <tr>
+                                    <th class="Anum" scope="row" data-bs-toggle="modal" href="#exampleModalToggle" role="button">1456892</th>
+                                    <td>Adrenalina</td>
+                                    <td>2021-09-12</td>
+                                    <td>332g</td>
+                                    <td>Albert Bonniers Förlag</td>
+                                    <td>Svenska</td>
+                                    <td>Zlatan Ibrahimovic</td>
+                                    <td>9789100196219</td>
+                                    <td>1</td>
+                                    <th scope="col">Skräck</th>
+                                    <th scope="col">199</th>
+                                </tr>
+                                <tr>
+                                    <th class="Anum" scope="row" data-bs-toggle="modal" href="#exampleModalToggle" role="button">1298564</th>
+                                    <td>Julkatten</td>
+                                    <td>2017-10-05</td>
+                                    <td>404g</td>
+                                    <td>Rabén Sjögren</td>
+                                    <td>Engelska</td>
+                                    <td>Ester Roxberg</td>
+                                    <td>9789129732238</td>
+                                    <td>2</td>
+                                    <th scope="col">Fakta</th>
+                                    <th scope="col">599</th>
+                                </tr>
+                                <tr>
+                                    <th class="Anum" scope="row" data-bs-toggle="modal" href="#exampleModalToggle" role="button">1456892</th>
+                                    <td>Adrenalina</td>
+                                    <td>2021-09-12</td>
+                                    <td>332g</td>
+                                    <td>Albert Bonniers Förlag</td>
+                                    <td>Svenska</td>
+                                    <td>Zlatan Ibrahimovic</td>
+                                    <td>9789100196219</td>
+                                    <td>1</td>
+                                    <th scope="col">Skönlitteratur</th>
+                                    <th scope="col">299</th>
+                                </tr>
+                                <tr>
+                                    <th class="Anum" scope="row" data-bs-toggle="modal" href="#exampleModalToggle" role="button">1298564</th>
+                                    <td>Julkatten</td>
+                                    <td>2017-10-05</td>
+                                    <td>404g</td>
+                                    <td>Rabén Sjögren</td>
+                                    <td>Engelska</td>
+                                    <td>Ester Roxberg</td>
+                                    <td>9789129732238</td>
+                                    <td>2</td>
+                                    <th scope="col">Fakta</th>
+                                    <th scope="col">599</th>
+                                </tr>
+                                <tr>
+                                    <th class="Anum" scope="row" data-bs-toggle="modal" href="#exampleModalToggle" role="button">1456892</th>
+                                    <td>Adrenalina</td>
+                                    <td>2021-09-12</td>
+                                    <td>332g</td>
+                                    <td>Albert Bonniers Förlag</td>
+                                    <td>Svenska</td>
+                                    <td>Zlatan Ibrahimovic</td>
+                                    <td>9789100196219</td>
+                                    <td>1</td>
+                                    <th scope="col">Skräck</th>
+                                    <th scope="col">199</th>
+                                </tr>
+                                <tr>
+                                    <th class="Anum" scope="row" data-bs-toggle="modal" href="#exampleModalToggle" role="button">1298564</th>
+                                    <td>Julkatten</td>
+                                    <td>2017-10-05</td>
+                                    <td>404g</td>
+                                    <td>Rabén Sjögren</td>
+                                    <td>Engelska</td>
+                                    <td>Ester Roxberg</td>
+                                    <td>9789129732238</td>
+                                    <td>2</td>
+                                    <th scope="col">Fakta</th>
+                                    <th scope="col">599</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 p-1">
+                    <!--Lägg till böcker-->
+                    <h2 class="mt-5">Lägg till ny bok</h2>
+                    <div class="shadow" id="newBookDiv">
+                        <input class="form-control" type="file">
+                        <input type="text" class="form-control" placeholder="Artikelnummer">
+                        <input type="text" class="form-control" placeholder="Title">
+                        <input type="text" class="form-control" placeholder="Utgvigen">
+                        <input type="text" class="form-control" placeholder="Vikt">
+                        <input type="text" class="form-control" placeholder="Förlag">
+                        <input type="text" class="form-control" placeholder="Språk">
+                        <input type="text" class="form-control" placeholder="Författare">
+                        <input type="text" class="form-control" placeholder="ISBN">
+                        <input type="text" class="form-control" placeholder="Upplaga">
+                        <input type="text" list="kategories" class="form-control" placeholder="Kategori">
+                        <datalist id="kategories">
+                            <option value="Roman">
+                            <option value="Skräck">
+                            <option value="Skönlitteratur">
+                            <option value="Fatka">
+                        </datalist>
+                        <input type="text" class="form-control" placeholder="Pris">
+                        <textarea class="form-control" rows="3" placeholder="Beskrivning"></textarea>
+                        <button type="button" class="btn btn-primary">Lägg till</button>
+                    </div>
+                    <!--Lägg till böcker-->
+                    <div class="p-2 rounded" id="utvaldaDiv">
+                        <h2 class="mt-2">Utvalda böcker</h2>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Artikelnummer" aria-label="Artikelnummer" aria-describedby="button-addon2">
+                            <button class="btn btn-primary" type="button" id="button-addon2">Ändra</button>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Artikelnummer" aria-label="Artikelnummer" aria-describedby="button-addon2">
+                            <button class="btn btn-primary" type="button" id="button-addon2">Ändra</button>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Artikelnummer" aria-label="Artikelnummer" aria-describedby="button-addon2">
+                            <button class="btn btn-primary" type="button" id="button-addon2">Ändra</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Edit modal-->
+        <div class="modal fade" id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel1" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editera book</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <input class="form-control mb-1" type="file">
+                        <input type="text" class="form-control mb-1" placeholder="Artikelnummer">
+                        <input type="text" class="form-control mb-1" placeholder="Title">
+                        <input type="text" class="form-control mb-1" placeholder="Utgvigen">
+                        <input type="text" class="form-control mb-1" placeholder="Vikt">
+                        <input type="text" class="form-control mb-1" placeholder="Förlag">
+                        <input type="text" class="form-control mb-1" placeholder="Språk">
+                        <input type="text" class="form-control mb-1" placeholder="Författare">
+                        <input type="text" class="form-control mb-1" placeholder="ISBN">
+                        <input type="text" class="form-control mb-1" placeholder="Upplaga">
+                        <input type="text" class="form-control mb-1" placeholder="Kategori">
+                        <input type="text" class="form-control mb-1" placeholder="Pris">
+                        <textarea class="form-control" rows="3" placeholder="Beskrivning"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <!-- Footer -->  
+    <footer>
+        <nav class="fot fixed-bottom">
+          <div class="d-flex flex-row justify-content-center d-none d-lg-flex mt-3 mb-0">
+              <div class="p-2">
+              <p> ©Copyright 2021 by Books-4You. All rights reserved.</p>
+              </div>
+          </div>
+        </nav>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    <script src="../js/index.js"></script>
+</body>
+</html>

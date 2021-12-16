@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Grupp 5">
+    <meta name="description" content="">
+    <title>Grupp 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/varukog.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html"><span class="material-icons-outlined">Books4You</a>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link" href="/html/kontakt.html">Kontakta</a>
+                    </li>
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            Kategorier
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="/html/böcker.html">Action</a></li>
+                            <li><a class="dropdown-item" href="/html/böcker.html">Äventyr</a></li>
+                            <li><a class="dropdown-item" href="/html/böcker.html">Thriller</a></li>
+                        </ul>
+                    </div>
+                </ul>
+                <ul class="nav navbar-nav navbar-right p-2">
+                    <li class="nav-item">
+                        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                          <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalToggleLabel">Log in</h5>
+                              </div>
+                              <div class="modal-body">
+                                  <div class="mb-3">
+                                      <input type="email" class="form-control mb-1" placeholder="name@example.com">
+                                      <input type="password" class="form-control" placeholder="password">
+                                  </div>
+                              </div>
+                              <div class="modal-footer">
+                                  <button class="btn btn-primary">Log in</button>
+                              </div>
+                              </div>
+                          </div>
+                      </div>
+                          <a class="nav-link" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Login</a>
+                          </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/varukorg.html">Varukorg</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!--Varukorgen-->
+        <div class="container-fluid p-lg-5">
+        <!--produkt i varukorgen-->
+            <section class="d-flex justify-content-between bg-light mt-2">
+                <div class="d-flex">
+                    <div class="inline-block">
+                        <img class="img-fluid" src="../img/bokAvicii.jpg" alt="">
+                    </div>
+                    <div class="inline-block ms-2">
+                        <p><strong>Title:</strong> Tim: Biografin om Avici</p>
+                        <p><strong>Författare:</strong> Måns Mosesson</p>
+                        <p><strong>Förlag:</strong> Albert Bonniers Förlag</p>
+                        <p><strong>Utgiven:</strong> 2021-11-16</p>
+                    </div>
+                </div>
+                <div class="inline-block">
+                    <button type="button" class="btn btn-outline-dark mb-3 mt-2">Ta bort</button>
+                    <select class="form-select mb-3" aria-label="Default select example">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <p><strong>Pris:</strong> 399kr</p>
+                </div>
+            </section>
+            <!--produkt i varukorgen-->
+             <section class="d-flex justify-content-between bg-light mt-2">
+                <div class="d-flex">
+                    <div class="inline-block">
+                        <img class="img-fluid" src="../img/bokKokain.jpg" alt="">
+                    </div>
+                    <div class="inline-block ms-2">
+                        <p><strong>Title:</strong> Kokain</p>
+                        <p><strong>Författare:</strong> Pascal Engman</p>
+                        <p><strong>Förlag:</strong> Bookmark Förlag</p>
+                        <p><strong>Utgiven:</strong> 2021-09-20</p>
+                    </div>
+                </div>
+                <div class="inline-block">
+                    <button type="button" class="btn btn-outline-dark mb-3 mt-2">Ta bort</button>
+                    <select class="form-select mb-3" aria-label="Default select example">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <p><strong>Pris:</strong> 299kr</p>
+                </div>
+            </section>
+            <!--Summa produkter-->
+            <div class="bg-light mt-2">
+                <h3>Att betala ink/exl moms</h3>
+                <div class="mt-2 slutpris me-3 text-end">
+                    <p><strong>Moms:</strong> 150kr</p>
+                    <p><strong>Exl. moms:</strong> 548kr</p>
+                    <p><strong>Totalt:</strong> 698kr</p>
+                </div>
+            </div>
+            <!--Form för checkout-->
+            <div class="bg-light mt-2">
+                <h3>Personuppgifter</h3>
+                <div class="personDiv">
+                    <div class="mt-3">
+                        <label for="exampleFormControlInput1" class="form-label">Ny kund? Ange personnummer</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="19930817-0000">
+                    </div>
+                    <div class="mt-3">
+                        <label for="exampleFormControlInput1" class="form-label">Befintlig kund? Logga in</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="exempel@outlook.com">
+                        <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="sdasdasd">
+                    </div>
+                </div>
+                
+            </div>
+            <!--Alternativ förbetalning-->
+            <div class="bg-light  mt-2">
+                <h3>Betalningsalternativ</h3>
+                <div class="payments">
+                    <div class="form-check block mt-3">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Kreditkort Visa/Mastercard
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Klarna 14 dagar faktura
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Klarna 30 dagar faktura
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Paypal
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Swish
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!--Alternativ för frakt-->
+            <div class="leverans bg-light mt-2">
+                <h3>Leveransmetod</h3>
+                <div class="form-check mt-2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Postnord utlämningsställe (gratis)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Hemleverrans vardagar (39kr)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Instabox (15kr)
+                    </label>
+                </div>
+            </div>
+            <!--Checkout-->
+            <div class="bg-light mt-5 checkout">
+                <h3>598kr</h3>
+                <a href="../html/tack.html"><button type="button" class="btn btn-dark mb-5">Gå till betalning</button></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>

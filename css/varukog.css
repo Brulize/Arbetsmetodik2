@@ -1,0 +1,39 @@
+section img {
+    width: 6rem;
+}
+
+.slutpris{
+    text-decoration: underline;
+}
+
+h3{
+    text-align: center;
+}
+
+.personDiv{
+    max-width: 40%;
+    margin-left: 30%;
+}
+
+.payments, .leverans{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout button {
+    width: 30%;
+    margin-left: 35%;
+}
+
+@media only screen and (max-width: 992px) {
+    .personDiv{
+        max-width: 100%;
+        margin-left: 0%;
+    }
+
+    .checkout button {
+        width: 100%;
+        margin-left: 0%;
+    }
+}
